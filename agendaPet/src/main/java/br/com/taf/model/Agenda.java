@@ -81,7 +81,7 @@ public class Agenda {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		return true;
+		return true ;
 	}
 
 }

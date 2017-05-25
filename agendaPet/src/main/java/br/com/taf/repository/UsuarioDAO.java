@@ -17,11 +17,11 @@ public class UsuarioDAO extends GenericDAO<Usuario> {
 	// Alterado
 	public boolean salvar(Usuario u) {
 		if (u.getId() == null) {
-			// Se salvar mostra essa mensagem
+			// Quando salvar exibe essa mensagem
 			JOptionPane.showMessageDialog(null, "Salvou!");
 			return super.salvar(u);
 		} else {
-			// Se editar mostra essa mensagem
+			// Quando editar exibe essa mensagem
 			JOptionPane.showMessageDialog(null, "Editou!");
 			return super.editar(u);
 		}

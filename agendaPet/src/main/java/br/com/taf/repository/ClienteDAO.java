@@ -8,7 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import br.com.petaf.model.Cliente;
+import br.com.taf.model.Cliente;
+
 
 public class ClienteDAO extends GenericDAO<Cliente> {
 

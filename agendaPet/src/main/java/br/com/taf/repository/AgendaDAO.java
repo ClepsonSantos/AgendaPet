@@ -14,6 +14,16 @@ import br.com.taf.model.Agenda;
 
 public class AgendaDAO extends GenericDAO<Agenda>{
 	
+	// Padrão Singleton
+	private static AgendaDAO instancia = null;
+
+	public static AgendaDAO getInstancia() {
+		if (instancia == null) {
+			instancia = new AgendaDAO();
+		}
+		return instancia;
+	}
+	
 	public AgendaDAO() {
 		super(Agenda.class);
 	}

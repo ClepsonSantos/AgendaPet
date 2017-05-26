@@ -8,10 +8,21 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import br.com.petaf.repository.ClienteDAO;
 import br.com.taf.model.Cliente;
 
 
 public class ClienteDAO extends GenericDAO<Cliente> {
+	
+	// Padrão Singleton
+		private static ClienteDAO instancia = null;
+
+		public static ClienteDAO getInstancia() {
+			if (instancia == null) {
+				instancia = new ClienteDAO();
+			}
+			return instancia;
+		}
 
 	SessionFactory getSession(){
 		return new Configuration().configure().buildSessionFactory();

@@ -9,6 +9,16 @@ import org.hibernate.criterion.Restrictions;
 import br.com.taf.model.Usuario;
 
 public class UsuarioDAO extends GenericDAO<Usuario> {
+	
+	// Padrão Singleton
+	private static UsuarioDAO instancia = null;
+
+	public static UsuarioDAO getInstancia() {
+		if (instancia == null) {
+			instancia = new UsuarioDAO();
+		}
+		return instancia;
+	}
 
 	public UsuarioDAO() {
 		super(Usuario.class);

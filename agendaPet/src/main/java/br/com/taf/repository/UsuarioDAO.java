@@ -24,7 +24,6 @@ public class UsuarioDAO extends GenericDAO<Usuario> {
 		super(Usuario.class);
 	} 
 
-	// Alterado
 	public boolean salvar(Usuario u) {
 		if (u.getId() == null) {
 			// Quando salvar exibe essa mensagem

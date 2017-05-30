@@ -22,7 +22,7 @@ public class ClienteController {
 	}
 	
 	public boolean excluir(Cliente cliente){
-		return this.clienteDAO.salvar(cliente);
+		return this.clienteDAO.excluir(cliente);
 	}
 	
 	public List<Cliente> lista(){

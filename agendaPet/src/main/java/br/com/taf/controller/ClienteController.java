@@ -3,17 +3,20 @@ package br.com.taf.controller;
 import java.util.List;
 
 import br.com.taf.model.Cliente;
+import br.com.taf.model.Pessoa;
+import br.com.taf.model.TipoPessoa;
 import br.com.taf.repository.ClienteDAO;
 import br.com.taf.repository.DAO;
 
 public class ClienteController {
 	
+	private TipoPessoa pessoa = new Pessoa();
 	private Cliente cliente;
 	
 	private DAO<Cliente> clienteDAO;
 	
 	public ClienteController() {
-		this.cliente = new Cliente();
+		this.cliente = pessoa.criarCLiente();
 		this.clienteDAO = ClienteDAO.getInstancia();
 	}
 	

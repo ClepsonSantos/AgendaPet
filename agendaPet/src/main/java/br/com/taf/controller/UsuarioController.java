@@ -2,18 +2,21 @@ package br.com.taf.controller;
 
 import java.util.List;
 
+import br.com.taf.model.Pessoa;
+import br.com.taf.model.TipoPessoa;
 import br.com.taf.model.Usuario;
 import br.com.taf.repository.DAO;
 import br.com.taf.repository.UsuarioDAO;
 
 public class UsuarioController {
 
-private Usuario usuario;
+	private TipoPessoa pessoa = new Pessoa();
+	private Usuario usuario;
 	
 	private DAO<Usuario> usuarioDAO;
 	
 	public UsuarioController() {
-		this.usuario = new Usuario();
+		this.usuario = pessoa.criarUsuario();
 		this.usuarioDAO = UsuarioDAO.getInstancia();
 	}
 	

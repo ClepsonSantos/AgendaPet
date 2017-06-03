@@ -11,6 +11,8 @@ public class Usuario {
 	@Id
 	@GeneratedValue
 	private Long id;
+	@Column(length = 50, nullable = false)
+	private String nome;
 	@Column(length=50, nullable=false)
 	private String login;
 	@Column(length=50, nullable=false)

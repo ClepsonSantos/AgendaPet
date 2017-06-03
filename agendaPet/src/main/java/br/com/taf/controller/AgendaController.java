@@ -6,13 +6,13 @@ import br.com.taf.model.Agenda;
 import br.com.taf.repository.AgendaDAO;
 import br.com.taf.repository.DAO;
 
-public class AgandaController {
+public class AgendaController {
 	
 private Agenda agenda;
 	
 	private DAO<Agenda> agendaDAO;
 	
-	public AgandaController() {
+	public AgendaController() {
 		this.agenda = new Agenda();
 		this.agendaDAO = AgendaDAO.getInstancia();
 	}

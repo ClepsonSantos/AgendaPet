@@ -11,6 +11,8 @@ public class Usuario {
 	@Id
 	@GeneratedValue
 	private Long id;
+	@Column(length = 50, nullable = false)
+	private String nome;
 	@Column(length=50, nullable=false)
 	private String login;
 	@Column(length=50, nullable=false)
@@ -26,6 +28,14 @@ public class Usuario {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getLogin() {

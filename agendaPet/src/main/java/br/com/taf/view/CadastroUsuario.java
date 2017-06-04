@@ -60,8 +60,8 @@ public class CadastroUsuario extends JDialog {
 
 		// Essas três linhas de códigos modifica a cor do JOptionPane
 		UIManager.put("OptionPane.messageForeground", Color.black);
-		UIManager.put("OptionPane.background", Color.yellow);
-		UIManager.put("Panel.background", Color.yellow);
+		UIManager.put("OptionPane.background", Color.WHITE);
+		UIManager.put("Panel.background", Color.WHITE);
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -131,6 +131,8 @@ public class CadastroUsuario extends JDialog {
 						lbMensagem.setText("");
 						lbMensagem.setIcon(null);
 						if (usuarioController.salvar(usuarioController.getUsuario())) {
+							ListaUsuario listaUsuario = new ListaUsuario();
+							listaUsuario.setVisible(true);
 							dispose();
 						} else {
 							JOptionPane.showMessageDialog(null, "Não Salvo", "Erro", JOptionPane.INFORMATION_MESSAGE);
@@ -150,6 +152,8 @@ public class CadastroUsuario extends JDialog {
 		btnVoltar.setFocusable(false);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				ListaUsuario listaUsuario = new ListaUsuario();
+				listaUsuario.setVisible(true);
 				dispose();
 			}
 		});

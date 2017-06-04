@@ -196,6 +196,8 @@ public class CadastroCliente extends JDialog {
 					clienteController.getCliente().setTelefone(tfTelefone.getText().toString());
 					
 					if (clienteController.salvar(clienteController.getCliente())) {
+						ListaCliente listaCliente = new ListaCliente();
+						listaCliente.setVisible(true);
 						dispose();
 					} else {
 						JOptionPane.showMessageDialog(null, "Erro ao Salvar", "Falha", JOptionPane.ERROR_MESSAGE);
@@ -217,6 +219,8 @@ public class CadastroCliente extends JDialog {
 		btnVoltar.setBackground(Color.WHITE);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				ListaCliente listaCliente = new ListaCliente();
+				listaCliente.setVisible(true);
 				dispose();
 			}
 		});

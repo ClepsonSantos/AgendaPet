@@ -96,6 +96,7 @@ public class ListaAnimal extends JFrame {
 				lbMensagem.setIcon(null);
 				CadastroAnimal cadastroAnimal = new CadastroAnimal();
 				cadastroAnimal.setVisible(true);
+				dispose();
 			}
 		});
 		btnAdicionar.setBackground(Color.WHITE);

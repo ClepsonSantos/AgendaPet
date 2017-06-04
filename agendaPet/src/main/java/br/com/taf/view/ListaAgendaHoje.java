@@ -134,7 +134,7 @@ public class ListaAgendaHoje extends JFrame {
 					lbMensagem.setText("");
 					lbMensagem.setIcon(null);
 					if (JOptionPane.showConfirmDialog(null, "Deseja excluir?", "",
-							JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+						JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
 						AgendaModel cm = (AgendaModel) table.getModel();
 						Agenda cliente = cm.getValueAt(i);
 						AgendaDAO cDAO = new AgendaDAO();

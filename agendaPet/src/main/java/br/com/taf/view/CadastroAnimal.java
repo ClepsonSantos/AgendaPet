@@ -172,6 +172,8 @@ public class CadastroAnimal extends JDialog {
 
 							AnimalDAO animalDAO = new AnimalDAO();
 							if (animalDAO.salvar(animalController.getAnimal())) {
+								ListaAnimal listaAnimal = new ListaAnimal();
+								listaAnimal.setVisible(true);
 								dispose();
 							} else {
 								JOptionPane.showMessageDialog(null, "Não Salvou", "Falha", JOptionPane.ERROR_MESSAGE);
@@ -192,6 +194,8 @@ public class CadastroAnimal extends JDialog {
 				btnCancelar.setBorder(null);
 				btnCancelar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
+						ListaAnimal listaAnimal = new ListaAnimal();
+						listaAnimal.setVisible(true);
 						dispose();
 					}
 				});

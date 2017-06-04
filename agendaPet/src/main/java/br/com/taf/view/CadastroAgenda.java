@@ -204,6 +204,8 @@ public class CadastroAgenda extends JDialog {
 								lbMensagem.setText("");
 								lbMensagem.setIcon(null);
 								if (agendaController.salvar(agendaController.getAgenda())) {
+									ListaAgenda agenda = new ListaAgenda();
+									agenda.setVisible(true);
 									dispose();
 								} else {
 									JOptionPane.showMessageDialog(null, "Não Salvou", "Erro",
@@ -235,8 +237,9 @@ public class CadastroAgenda extends JDialog {
 		btnVoltar.setBorder(null);
 		btnVoltar.setFocusable(false);
 		btnVoltar.addActionListener(new ActionListener() {
-
 			public void actionPerformed(ActionEvent arg0) {
+				ListaAgenda listaAgenda = new ListaAgenda();
+				listaAgenda.setVisible(true);
 				dispose();
 			}
 		});

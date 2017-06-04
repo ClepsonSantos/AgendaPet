@@ -102,6 +102,7 @@ public class ListaAgenda extends JFrame {
 				lbMensagem.setIcon(null);
 				CadastroAgenda cadastroAgenda = new CadastroAgenda();
 				cadastroAgenda.setVisible(true);
+				dispose();
 			}
 		});
 		btnAdicionar.setFont(new Font("Aero Matics Light", Font.BOLD, 15));

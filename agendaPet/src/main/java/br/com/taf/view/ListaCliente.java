@@ -130,8 +130,9 @@ public class ListaCliente extends JFrame {
 					CadastroCliente tcc = new CadastroCliente(cliente);
 					tcc.setVisible(true);
 
-					
 					preencheTabelaCliente(clienteController.lista());
+					
+					dispose();
 				}
 			}
 

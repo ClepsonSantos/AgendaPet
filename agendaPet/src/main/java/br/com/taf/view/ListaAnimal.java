@@ -125,6 +125,8 @@ public class ListaAnimal extends JFrame {
 					tcc.setVisible(true);
 
 					preencheTabelaAnimal(animalController.lista());
+					
+					dispose();
 				}
 			}
 

@@ -134,6 +134,8 @@ public class ListaAgenda extends JFrame {
 
 					AgendaDAO aDAO = new AgendaDAO();
 					preencheTabelaAgenda(aDAO.listar());
+					
+					dispose();
 				}
 			}
 		});

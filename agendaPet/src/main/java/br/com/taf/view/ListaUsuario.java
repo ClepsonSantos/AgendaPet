@@ -116,7 +116,6 @@ public class ListaUsuario extends JFrame {
 				lbMensagem.setIcon(null);
 				CadastroUsuario cadastroUsuario = new CadastroUsuario();
 				cadastroUsuario.setVisible(true);
-				dispose();
 			}
 		});
 		btnAdicionar.setBackground(Color.WHITE);
@@ -142,6 +141,7 @@ public class ListaUsuario extends JFrame {
 					tcu.setVisible(true);
 
 					preencheTabelaUsuario(usuarioController.lista());
+					
 				}
 			}
 		});

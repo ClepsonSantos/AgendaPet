@@ -147,7 +147,7 @@ public class CadastroCliente extends JDialog {
 
 		JLabel lblCelular = new JLabel("Celular");
 		lblCelular.setFont(new Font("Aero Matics Light", Font.BOLD, 15));
-		lblCelular.setBounds(56, 140, 55, 16);
+		lblCelular.setBounds(44, 138, 61, 16);
 		panel.add(lblCelular);
 
 		MaskFormatter mascaraCelular = null;
@@ -162,7 +162,7 @@ public class CadastroCliente extends JDialog {
 
 		JLabel lblTelefone = new JLabel("Telefone");
 		lblTelefone.setFont(new Font("Aero Matics Light", Font.BOLD, 15));
-		lblTelefone.setBounds(39, 169, 69, 16);
+		lblTelefone.setBounds(34, 169, 74, 16);
 		panel.add(lblTelefone);
 
 		MaskFormatter mascaraTelefone = null;

@@ -116,6 +116,8 @@ public class ListaAgendaHoje extends JFrame {
 
 					AgendaDAO aDAO = new AgendaDAO();
 					preencheTabelaAgenda(aDAO.listarDataHoje());
+					
+					dispose();
 				}
 			}
 		});

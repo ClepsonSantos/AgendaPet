@@ -150,8 +150,6 @@ public class CadastroUsuario extends JDialog {
 		btnVoltar.setFocusable(false);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ListaUsuario listaUsuario = new ListaUsuario();
-				listaUsuario.setVisible(true);
 				dispose();
 			}
 		});

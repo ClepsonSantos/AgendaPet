@@ -27,7 +27,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.SwingConstants;
 
-public class TelaPrincipal extends JFrame {
+public class TelaPrincipalAdmin extends JFrame {
 
 	public String teste;
 	private JPanel contentPane;
@@ -40,7 +40,7 @@ public class TelaPrincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaPrincipal frame = new TelaPrincipal();
+					TelaPrincipalAdmin frame = new TelaPrincipalAdmin();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -52,7 +52,7 @@ public class TelaPrincipal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TelaPrincipal() {
+	public TelaPrincipalAdmin() {
 		
 		// Desabilitar O Maximizarr
 		setResizable(false);
@@ -74,7 +74,7 @@ public class TelaPrincipal extends JFrame {
 		this.setIconImage(imagemTitulo);
 
 		JButton btnCliente = new JButton("Cliente");
-		btnCliente.setBounds(17, 266, 98, 26);
+		btnCliente.setBounds(10, 226, 98, 26);
 		btnCliente.setIcon(new ImageIcon(this.getClass().getResource("/br/com/taf/img/cliente.png")));
 		contentPane.add(btnCliente);
 		btnCliente.setFont(new Font("Aero Matics Light", Font.BOLD, 15));
@@ -88,7 +88,7 @@ public class TelaPrincipal extends JFrame {
 		btnAnimal.setBackground(Color.WHITE);
 		btnAnimal.setBorder(null);
 		btnAnimal.setFocusable(false);
-		btnAnimal.setBounds(399, 266, 98, 26);
+		btnAnimal.setBounds(397, 226, 98, 26);
 		contentPane.add(btnAnimal);
 		btnAnimal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -105,7 +105,7 @@ public class TelaPrincipal extends JFrame {
 		btnAgenda.setBackground(Color.WHITE);
 		btnAgenda.setBorder(null);
 		btnAgenda.setFocusable(false);
-		btnAgenda.setBounds(132, 266, 98, 26);
+		btnAgenda.setBounds(77, 266, 98, 26);
 		contentPane.add(btnAgenda);
 		btnAgenda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -119,7 +119,7 @@ public class TelaPrincipal extends JFrame {
 		JLabel label_1 = new JLabel(tl.getNomeUsuario().toUpperCase());
 		label_1.setHorizontalAlignment(SwingConstants.CENTER);
 		label_1.setFont(new Font("Aero Matics Light", Font.BOLD, 15));
-		label_1.setBounds(368, 28, 135, 16);
+		label_1.setBounds(371, 28, 127, 16);
 		contentPane.add(label_1);
 
 		JLabel lblBemVindo = new JLabel("Bem Vindo");
@@ -154,8 +154,23 @@ public class TelaPrincipal extends JFrame {
 		});
 		btnAgendaParaHoje.setFont(new Font("Aero Matics Light", Font.BOLD, 15));
 		btnAgendaParaHoje.setBackground(Color.WHITE);
-		btnAgendaParaHoje.setBounds(240, 265, 150, 28);
+		btnAgendaParaHoje.setBounds(185, 265, 150, 28);
 		contentPane.add(btnAgendaParaHoje);
+		
+		JButton btnUsuario = new JButton("Usuario");
+		btnUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ListaUsuario lu = new ListaUsuario();
+				lu.setVisible(true);
+			}
+		});
+		btnUsuario.setFont(new Font("Aero Matics Light", Font.BOLD, 15));
+		btnUsuario.setIcon(new ImageIcon(this.getClass().getResource("/br/com/taf/img/usuario.png")));
+		btnUsuario.setBorder(null);
+		btnUsuario.setFocusable(false);
+		btnUsuario.setBackground(Color.WHITE);
+		btnUsuario.setBounds(345, 266, 89, 26);
+		contentPane.add(btnUsuario);
 
 		JLabel lbImagem = new JLabel("");
 		lbImagem.setIcon(new ImageIcon(this.getClass().getResource("/br/com/taf/img/petFundoPrincipal.png")));

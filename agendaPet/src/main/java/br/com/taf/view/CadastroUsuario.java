@@ -131,8 +131,6 @@ public class CadastroUsuario extends JDialog {
 						lbMensagem.setText("");
 						lbMensagem.setIcon(null);
 						if (usuarioController.salvar(usuarioController.getUsuario())) {
-							ListaUsuario listaUsuario = new ListaUsuario();
-							listaUsuario.setVisible(true);
 							dispose();
 						} else {
 							JOptionPane.showMessageDialog(null, "Não Salvo", "Erro", JOptionPane.INFORMATION_MESSAGE);

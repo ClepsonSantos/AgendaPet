@@ -11,42 +11,43 @@ import org.hibernate.cfg.Configuration;
 import br.com.taf.repository.ClienteDAO;
 import br.com.taf.model.Cliente;
 
-
 public class ClienteDAO extends GenericDAO<Cliente> {
-	
+
 	// Padrão Singleton
-		private static ClienteDAO instancia = null;
+	private static ClienteDAO instancia = null;
 
-		public static ClienteDAO getInstancia() {
-			if (instancia == null) {
-				instancia = new ClienteDAO();
-			}
-			return instancia;
+	public static ClienteDAO getInstancia() {
+		if (instancia == null) {
+			instancia = new ClienteDAO();
 		}
+		return instancia;
+	}
 
-	SessionFactory getSession(){
+	SessionFactory getSession() {
 		return new Configuration().configure().buildSessionFactory();
 	}
-	
+
 	public ClienteDAO() {
 		super(Cliente.class);
 	}
-	public boolean salvar(Cliente c){
-		if(c.getId() == null){
+
+	public boolean salvar(Cliente c) {
+		if (c.getId() == null) {
 			// Se salvar mostra essa mensagem
 			JOptionPane.showMessageDialog(null, "Salvou!");
-			return super.salvar(c); 
+			return super.salvar(c);
 		} else {
 			// Se editar mostra essa mensagem
 			JOptionPane.showMessageDialog(null, "Editou!");
 			return super.editar(c);
 		}
 	}
-	
+
 	@SuppressWarnings("unchecked")
-	public List<Cliente> listarPorNome(String nome){
-		Session session  = getSession().openSession();
-		return session.createQuery("from Cliente as c where c.nome like '%"+nome+"%' or c.endereco like '%"+nome+"%'")
+	public List<Cliente> listarPorNome(String nome) {
+		Session session = getSession().openSession();
+		return session
+				.createQuery("from Cliente as c where c.nome like '%" + nome + "%' or c.endereco like '%" + nome + "%'")
 				.list();
 	}
 

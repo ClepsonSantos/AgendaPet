@@ -33,9 +33,6 @@ public class TelaPrincipalAdmin extends JFrame {
 	private JPanel contentPane;
 	private TelaLogin tl = new TelaLogin();
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -49,9 +46,6 @@ public class TelaPrincipalAdmin extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public TelaPrincipalAdmin() {
 		
 		// Desabilitar O Maximizarr

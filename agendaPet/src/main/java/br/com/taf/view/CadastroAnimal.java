@@ -222,7 +222,6 @@ public class CadastroAnimal extends JDialog {
 		tfNome.setText(animal.getNome());
 		tfRaca.setText(animal.getRaca());
 		tfIdade.setText(String.valueOf(animal.getIdade()));
-//		String ani = animal.getTipo().toString();
 		comboBox.setSelectedItem(animal.getTipo());
 		cmbCliente.setSelectedItem((Cliente) animal.getCliente());
 	}

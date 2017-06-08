@@ -30,9 +30,6 @@ public class TelaLogin extends JFrame {
 	private JLabel lbMensagem;
 	private static String nomeUsuario;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

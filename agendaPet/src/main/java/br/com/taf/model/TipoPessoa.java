@@ -4,5 +4,5 @@ public interface TipoPessoa {
 
 	Usuario criarUsuario();
 	Cliente criarCLiente();
-	
+
 }

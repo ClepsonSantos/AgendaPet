@@ -37,9 +37,6 @@ public class ListaCliente extends JFrame {
 	
 	private ClienteController clienteController = new ClienteController();
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -52,10 +49,7 @@ public class ListaCliente extends JFrame {
 			}
 		});
 	}
-	
-	/**
-	 * Create the frame.
-	 */
+
 	public ListaCliente() {
 		
 		// Desabilitar O Maximizarr

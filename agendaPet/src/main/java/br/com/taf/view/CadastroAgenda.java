@@ -47,9 +47,6 @@ public class CadastroAgenda extends JDialog {
 	private AgendaController agendaController = new AgendaController();
 	private ClienteController clienteController = new ClienteController();
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

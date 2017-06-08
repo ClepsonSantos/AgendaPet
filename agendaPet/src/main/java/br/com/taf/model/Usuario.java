@@ -13,13 +13,13 @@ public class Usuario {
 	private Long id;
 	@Column(length = 50, nullable = false)
 	private String nome;
-	@Column(length=50, nullable=false)
+	@Column(length = 50, nullable = false)
 	private String login;
-	@Column(length=50, nullable=false)
+	@Column(length = 50, nullable = false)
 	private String senha;
-	
+
 	public Usuario() {
-	
+
 	}
 
 	public Long getId() {
@@ -78,5 +78,5 @@ public class Usuario {
 			return false;
 		return true;
 	}
-	
+
 }

@@ -5,13 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity //entidade
+@Entity // entidade
 public class Cliente {
 
-	@Id //chave primaria
-	@GeneratedValue //autoincremente
+	@Id // chave primaria
+	@GeneratedValue // autoincremente
 	private Long id;
-	@Column(length = 250, nullable = false)//quantidade maxima de caractere e valor não pode ser nulu
+	// valor não pode ser nulu
+	// quantidade maxima de caractere e
+	@Column(length = 250, nullable = false) 						
 	private String nome;
 	@Column(length = 20)
 	private String cpf;

@@ -1,6 +1,11 @@
 package br.com.taf.model;
 
-public class Pessoa implements TipoPessoa{
+/*
+ * Classe base para criar todos os tipos de pessoa; 
+ * 
+ */
+
+public class Pessoa implements TipoPessoa {
 
 	@Override
 	public Usuario criarUsuario() {

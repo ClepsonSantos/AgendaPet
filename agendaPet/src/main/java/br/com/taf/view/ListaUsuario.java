@@ -36,9 +36,6 @@ public class ListaUsuario extends JFrame {
 	
 	private UsuarioController usuarioController = new UsuarioController();
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -52,9 +49,6 @@ public class ListaUsuario extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public ListaUsuario() {
 		
 		// Desabilitar O Maximizarr

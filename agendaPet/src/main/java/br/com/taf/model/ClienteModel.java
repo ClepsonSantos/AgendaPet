@@ -4,16 +4,15 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-public class ClienteModel extends AbstractTableModel{
-	
-	private String[] colunas = {"Id", "Nome", "Endereco", "Celular", "Telefone"};
+public class ClienteModel extends AbstractTableModel {
+
+	private String[] colunas = { "Id", "Nome", "Endereco", "Celular", "Telefone" };
 	private List<Cliente> clientes;
-	
+
 	public ClienteModel(List<Cliente> clientes) {
 		this.clientes = clientes;
 		super.fireTableDataChanged();
 	}
-	
 
 	@Override
 	public int getColumnCount() {
@@ -42,11 +41,11 @@ public class ClienteModel extends AbstractTableModel{
 		}
 		return null;
 	}
-	
-	public Cliente getValueAt(int linha){
-		return clientes.get(linha);		
+
+	public Cliente getValueAt(int linha) {
+		return clientes.get(linha);
 	}
-	
+
 	@Override
 	public String getColumnName(int column) {
 		switch (column) {
@@ -65,18 +64,3 @@ public class ClienteModel extends AbstractTableModel{
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

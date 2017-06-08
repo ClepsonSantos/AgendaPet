@@ -39,9 +39,6 @@ public class CadastroCliente extends JDialog {
 	
 	private ClienteController clienteController = new ClienteController();
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -56,10 +53,6 @@ public class CadastroCliente extends JDialog {
 			}
 		});
 	}
-
-	/**
-	 * Create the frame.
-	 */
 
 	public void initComponent() {
 

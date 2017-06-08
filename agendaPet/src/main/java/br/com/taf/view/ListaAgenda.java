@@ -29,7 +29,6 @@ import br.com.taf.controller.AgendaController;
 import br.com.taf.model.Agenda;
 import br.com.taf.model.AgendaModel;
 import br.com.taf.repository.AgendaDAO;
-import br.com.taf.repository.DAO;
 
 public class ListaAgenda extends JFrame {
 

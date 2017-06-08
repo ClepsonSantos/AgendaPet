@@ -35,9 +35,6 @@ public class CadastroUsuario extends JDialog {
 	
 	private UsuarioController usuarioController = new UsuarioController();
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -53,9 +50,6 @@ public class CadastroUsuario extends JDialog {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public void initComponents() {
 
 		// Essas três linhas de códigos modifica a cor do JOptionPane

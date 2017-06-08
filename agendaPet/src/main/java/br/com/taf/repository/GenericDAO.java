@@ -1,23 +1,29 @@
 package br.com.taf.repository;
 
+/* 
+ * Nessa classe foi atribuido o padrão Information Expert
+ * Nela foi atribuida a responsabilidade de criar os métodos que iam repetir em outras classe.
+ * 
+ */
+
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class GenericDAO<T> implements DAO<T>{
-	
+public class GenericDAO<T> implements DAO<T> {
+
 	private Class classe;
 
 	public GenericDAO(Class classe) {
 		this.classe = classe;
 	}
 
-	SessionFactory getSession(){
+	SessionFactory getSession() {
 		return new Configuration().configure().buildSessionFactory();
 	}
-	
+
 	@Override
 	public boolean salvar(T t) {
 		Session session = null;
@@ -81,7 +87,5 @@ public class GenericDAO<T> implements DAO<T>{
 		}
 		return lista;
 	}
-	
-	
 
 }

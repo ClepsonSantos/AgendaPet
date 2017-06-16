@@ -2,7 +2,7 @@ package br.com.taf.repository;
 
 /* 
  * Nessa classe foi atribuido o padrão Information Expert
- * Nela foi atribuida a responsabilidade de criar os métodos que iam repetir em outras classe.
+ * Nela foi atribuida a responsabilidade de criar os métodos que iram repetir em outras classe.
  * 
  */
 

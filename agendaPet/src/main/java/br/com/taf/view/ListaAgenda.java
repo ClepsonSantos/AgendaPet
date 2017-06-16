@@ -131,7 +131,7 @@ public class ListaAgenda extends JFrame {
 					CadastroAgenda tcc = new CadastroAgenda(agenda);
 					tcc.setVisible(true);
 
-					AgendaDAO aDAO = new AgendaDAO();
+					AgendaDAO aDAO = AgendaDAO.getInstancia();
 					preencheTabelaAgenda(aDAO.listar());
 					
 					dispose();

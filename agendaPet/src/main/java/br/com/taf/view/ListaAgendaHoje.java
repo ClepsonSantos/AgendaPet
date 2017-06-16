@@ -114,7 +114,7 @@ public class ListaAgendaHoje extends JFrame {
 					CadastroAgenda tcc = new CadastroAgenda(agenda);
 					tcc.setVisible(true);
 
-					AgendaDAO aDAO = new AgendaDAO();
+					AgendaDAO aDAO = AgendaDAO.getInstancia();
 					preencheTabelaAgenda(aDAO.listarDataHoje());
 					
 					dispose();
@@ -139,7 +139,7 @@ public class ListaAgendaHoje extends JFrame {
 						JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
 						AgendaModel cm = (AgendaModel) table.getModel();
 						Agenda cliente = cm.getValueAt(i);
-						AgendaDAO cDAO = new AgendaDAO();
+						AgendaDAO cDAO = AgendaDAO.getInstancia();
 						agendaController.excluir(cliente);
 						preencheTabelaAgenda(cDAO.listarDataHoje());
 						JOptionPane.showMessageDialog(null, "Cliente Excluído");
@@ -158,7 +158,7 @@ public class ListaAgendaHoje extends JFrame {
 		btnRefresh.setFocusable(false);
 		btnRefresh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				AgendaDAO aDAO = new AgendaDAO();
+				AgendaDAO aDAO = AgendaDAO.getInstancia();
 				preencheTabelaAgenda(aDAO.listarDataHoje());
 			}
 		});
@@ -191,7 +191,7 @@ public class ListaAgendaHoje extends JFrame {
 		lbImagem.setBounds(0, 0, 434, 261);
 		contentPane.add(lbImagem);
 
-		AgendaDAO dao = new AgendaDAO();
+		AgendaDAO dao = AgendaDAO.getInstancia();
 		preencheTabelaAgenda(dao.listarDataHoje());
 
 	}
@@ -200,7 +200,7 @@ public class ListaAgendaHoje extends JFrame {
 		lbMensagem.setText("");
 		lbMensagem.setIcon(null);
 		// Exclui automaticamente as datas antigas.
-		AgendaDAO dao = new AgendaDAO();
+		AgendaDAO dao = AgendaDAO.getInstancia();
 		List<Agenda> lista = dao.listarDataHoje();
 		Date hj = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

@@ -22,7 +22,7 @@ public class AgendaDAO extends GenericDAO<Agenda> {
 		return instancia;
 	}
 
-	public AgendaDAO() {
+	private AgendaDAO() {
 		super(Agenda.class);
 	}
 

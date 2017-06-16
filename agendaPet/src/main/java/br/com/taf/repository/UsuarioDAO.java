@@ -20,7 +20,7 @@ public class UsuarioDAO extends GenericDAO<Usuario> {
 		return instancia;
 	}
 
-	public UsuarioDAO() {
+	private UsuarioDAO() {
 		super(Usuario.class);
 	}
 

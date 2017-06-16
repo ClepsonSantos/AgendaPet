@@ -131,7 +131,7 @@ public class TelaLogin extends JFrame {
 					lbMensagem.setText("");
 					lbMensagem.setIcon(null);
 
-					UsuarioDAO usuarioDAO = new UsuarioDAO();
+					UsuarioDAO usuarioDAO = UsuarioDAO.getInstancia();
 					Usuario usuario = null;
 					
 					// Aqui verifica se a senha e o login existem no banco

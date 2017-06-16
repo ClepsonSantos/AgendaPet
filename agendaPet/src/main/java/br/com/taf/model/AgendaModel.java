@@ -6,7 +6,7 @@ import javax.swing.table.AbstractTableModel;
 
 public class AgendaModel extends AbstractTableModel {
 
-	private String[] colunas = { "Cliente", "Hora", "Data" };
+	private String[] colunas = { "Cliente", "Data", "Hora" };
 	private List<Agenda> agendas;
 
 	public AgendaModel(List<Agenda> agendas) {

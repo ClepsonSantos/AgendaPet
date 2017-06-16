@@ -216,7 +216,7 @@ public class ListaCliente extends JFrame {
 		btnPesquisar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(!tfNomePesquisa.getText().isEmpty()){
-					ClienteDAO dao = new ClienteDAO();
+					ClienteDAO dao = ClienteDAO.getInstancia();
 					List<Cliente> listaPorNome = dao.listarPorNome(tfNomePesquisa.getText().toString());
 					preencheTabelaCliente(listaPorNome);
 				} else {

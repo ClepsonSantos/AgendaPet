@@ -16,7 +16,7 @@ public class AnimalDAO extends GenericDAO<Animal> {
 		return instancia;
 	}
 
-	public AnimalDAO() {
+	private AnimalDAO() {
 		super(Animal.class);
 	}
 

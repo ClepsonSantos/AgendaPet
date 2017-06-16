@@ -2,7 +2,7 @@ package br.com.taf.controller;
 
 /* 
  * Nessa classe foi atribuido o padrão Creator
- * Ne Classe foi criada uma váriavel de instancia usuarioDAO 
+ * Nessa Classe foi criada uma váriavel de instancia usuarioDAO 
  * onde a Classe UsuarioDAO será respónsavél para criar uma nova instancia.
  * 
  */

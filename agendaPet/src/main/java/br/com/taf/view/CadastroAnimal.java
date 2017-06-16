@@ -110,7 +110,7 @@ public class CadastroAnimal extends JDialog {
 		panel.add(lblDono);
 
 		try {
-			ClienteDAO clienteDAO = new ClienteDAO();
+			ClienteDAO clienteDAO = ClienteDAO.getInstancia();
 			List<Cliente> clientes = clienteDAO.listar();
 			for (Cliente cliente : clientes) {
 				cmbCliente.addItem(cliente);
@@ -170,7 +170,7 @@ public class CadastroAnimal extends JDialog {
 							animalController.getAnimal().setTipo((TipoAnimal) comboBox.getSelectedItem());
 							animalController.getAnimal().setCliente((Cliente) cmbCliente.getSelectedItem());
 
-							AnimalDAO animalDAO = new AnimalDAO();
+							AnimalDAO animalDAO = AnimalDAO.getInstancia();
 							if (animalDAO.salvar(animalController.getAnimal())) {
 								ListaAnimal listaAnimal = new ListaAnimal();
 								listaAnimal.setVisible(true);

@@ -116,7 +116,7 @@ public class CadastroUsuario extends JDialog {
 					usuarioController.getUsuario().setSenha(tfSenha.getText().toString());
 					usuarioController.getUsuario().setNome(tfNome.getText().toString());
 
-					UsuarioDAO usuarioDAO = new UsuarioDAO();
+					UsuarioDAO usuarioDAO = UsuarioDAO.getInstancia();
 					// Verifica se o usuario já foi cadastrado
 					if (usuarioDAO.existeUsuarioSemelhante(usuarioController.getUsuario())) {
 						lbMensagem.setText("Usuario já existe");

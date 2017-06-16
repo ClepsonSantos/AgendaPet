@@ -27,7 +27,7 @@ public class ClienteDAO extends GenericDAO<Cliente> {
 		return new Configuration().configure().buildSessionFactory();
 	}
 
-	public ClienteDAO() {
+	private ClienteDAO() {
 		super(Cliente.class);
 	}
 

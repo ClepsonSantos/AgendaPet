@@ -83,7 +83,7 @@ public class CadastroCliente extends JDialog {
 		lbMensagem = new JLabel("");
 		lbMensagem.setForeground(Color.RED);
 		lbMensagem.setBackground(Color.RED);
-		lbMensagem.setBounds(12, 236, 378, 14);
+		lbMensagem.setBounds(0, 228, 378, 14);
 		panel.add(lbMensagem);
 
 		JLabel lblNome = new JLabel("Nome");
